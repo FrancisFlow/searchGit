@@ -1,1 +1,8 @@
-<p>nav-bar works!</p>
+<div class="container-fluid" >
+    <form  #userForm='ngForm' >
+        <label for="userName">Search </label>
+        <input type="search" name="userName" id="userName"  [(ngModel)]="userName">
+    
+    <button type="submit"(click)='searchForUser()'>Search</button>
+    </form>
+</div>
