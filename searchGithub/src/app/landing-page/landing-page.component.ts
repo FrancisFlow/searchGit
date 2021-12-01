@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GitServiceService } from '../git-service.service';
+import { User } from '../user'
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  user: User;
 
-  ngOnInit(): void {
+  constructor(private gitService:GitServiceService) { 
+
+
   }
+
+  ngOnInit(){
+    this.gitService.getUserData("FrancisFlow");
+    this.user= this.gitService.user;
+  }
+
 
 }
