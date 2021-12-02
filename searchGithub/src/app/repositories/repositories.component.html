@@ -1,23 +1,25 @@
 <div class="cards">
-    <div class="card" *ngFor="let repo of repos">
+    <div class="card" >
         <div class="card-body">
             <div class="card-title">
                 <a href="{{repo.html_url}}">{{repo.name}}</a>
-                </div>    
+            </div>    
 
             <div class="card-text">
-                <p *ngIf="repo.description">{{repo.description}}</p>
-                <p* ngIf="!repo.description">A description of this repository was not found</p>
-                </div>
+                <p>{{repo.description}}</p>
+                <p *ngIf="!repo.description">A description of this repository was not found</p>
+            </div>
 
-                <div class="card-bottom" appBold>
+                <div class="card-bottom">
                     <div *ngIf="repo.language">
                         {{repo.language}}
                     </div>
                     <div *ngIf="!repo.language">
                         No language description provided
                     </div>
-
-                </div>
+              </div>
+            
         </div>
-     </div>
+        
+    </div>
+</div>

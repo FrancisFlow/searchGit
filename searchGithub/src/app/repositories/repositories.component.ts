@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Repository } from '../repository';
+import { GitServiceService } from '../git-service.service';
 
 @Component({
   selector: 'app-repositories',
@@ -8,7 +9,7 @@ import { Repository } from '../repository';
 })
 export class RepositoriesComponent implements OnInit {
 
-  @Input() repos:Repository;
+  @Input() repo:Repository;
 
   constructor() { 
 
