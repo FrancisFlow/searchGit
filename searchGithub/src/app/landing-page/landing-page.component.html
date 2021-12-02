@@ -6,17 +6,22 @@
 
     <img src={{user.avatar_url}} alt="github-profile">
 
-    {{user.followers}}
-    {{user.login}}
-    {{user.following}}
+    User Name: {{user.login}}
+    Following: {{user.following}}
+    Followers: {{user.followers}}
 
+    <div *ngIf= "user.public_repos>20"  appRepositoryHighlight>
+
+    Number of public repositories: {{user.public_repos}}
+
+    </div>
+    
     Joined Github {{user.created_at| timePipe}} days ago
 
 
 </div>
-</div>
 
-{{user.public_repos}}
+</div>
 
 
 <div *ngFor=" let repo of repos">
