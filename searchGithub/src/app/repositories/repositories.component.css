@@ -1,0 +1,17 @@
+.card {
+    
+    margin: 3%;
+    width: 19rem;
+    height: 16rem;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color:silver;
+    margin-left: 5%;
+    border-radius: 5px;
+  }
+  
+  .cards {
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0.5;
+  }

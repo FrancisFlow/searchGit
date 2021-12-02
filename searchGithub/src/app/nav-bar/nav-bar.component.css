@@ -1,0 +1,24 @@
+
+/*navbar*/
+.navbar {
+    padding: 0 0 2.5rem;
+  }
+  
+  .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-itm {
+    padding: 0 18px;
+  }
+  
+  .nav-link {
+    font-size: 1.5rem;
+    font-family: "Montserrat-Light";
+  }
+
+  .colored-section {
+    background-color: #70818f;
+  }
