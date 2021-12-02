@@ -18,10 +18,9 @@
             </li>
           </ul>
           <form  #userForm='ngForm' >
-            <label for="userName">Search </label>
-            <input type="search" name="userName" id="userName"  [(ngModel)]="userName">
+            <input type="search" placeholder='Search for Github users' name="userName" id="userName"  [(ngModel)]="userName">
         
-        <button class=""  type="submit"(click)='searchForUser()'>Search</button>
+        <button class="btn btn-success"  type="submit"(click)='searchForUser()'>Search</button>
         </form>
         </div>
       </nav>

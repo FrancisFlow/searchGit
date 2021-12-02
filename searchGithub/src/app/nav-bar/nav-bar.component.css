@@ -22,3 +22,16 @@
   .colored-section {
     background-color: #70818f;
   }
+
+
+  .btn {
+    background-color:deeppink;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 33px
+  }
+  
+  input {
+    border: 1px solid;
+    border-radius: 20px;
+  }

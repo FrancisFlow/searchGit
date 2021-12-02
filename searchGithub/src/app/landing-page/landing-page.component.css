@@ -1,3 +1,16 @@
 img {
     border-radius: 50%;
+    max-width: 30%;
+    max-height:30%;
+    float:inline-start;
+
   }
+
+.text-center{
+  text-align:center;
+}
+
+.container{
+  display:inline-block;
+
+}
