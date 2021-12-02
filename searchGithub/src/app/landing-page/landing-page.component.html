@@ -10,12 +10,20 @@
     Following: {{user.following}}
     Followers: {{user.followers}}
 
-    <div *ngIf= "user.public_repos>20"  appRepositoryHighlight>
+    <div *ngIf= "user.public_repos>30"  appRepositoryHighlight>
 
+    
     Number of public repositories: {{user.public_repos}}
 
+    {{user.login}} has been busy creating new projects
+
     </div>
-    
+    <div *ngIf = "user.public_repos<30">
+
+      Number of public repositories: {{user.public_repos}}
+
+    </div>
+
     Joined Github {{user.created_at| timePipe}} days ago
 
 
