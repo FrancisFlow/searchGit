@@ -9,3 +9,7 @@ button{
 h1, h2, h4 {
     font-family:'Times New Roman', Times, serif;
 }
+
+* {
+    list-style:none;
+}

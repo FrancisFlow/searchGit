@@ -1,45 +1,59 @@
-<div>
 
+<h1 *ngIf= 'user.login==userNotFound()' class='text-center jumbotron'>
+User Not Found.
+<hr>
+Click the green Icon at the top right to navigate back to homepage.
+</h1>
+
+
+<div  *ngIf="user.login != userNotFound()" >
 <div class='container-fluid' >
 
     <img src={{user.avatar_url}} alt="github-profile">
 
 <div  class="container column-md-4" >
 
-    User Name: {{user.login}}
-    <br>
-    Following: {{user.following}}
-    <br>
-    Followers: {{user.followers}}
-    <br>
+    <ul>
 
-    <div *ngIf= "user.public_repos>30"  appRepositoryHighlight>
+    User Name: {{user.login}}
+    <li *ngIf="user.following" >
+    Following: {{user.following}}
+    </li>
+    <li  *ngIf="user.followers" >
+    Followers: {{user.followers}}
+    </li>
+
+    <li *ngIf="user.public_repos" >
+     <div *ngIf= "user.public_repos>30"  appRepositoryHighlight>
 
     
     Number of public repositories: {{user.public_repos}}
-
     <br>
 
     {{user.login}} has been busy creating new projects
-
     </div>
-    <div *ngIf = "user.public_repos<30">
+
+    <li *ngIf = "user.public_repos<30">
 
       Number of public repositories: {{user.public_repos}}
 
-    </div>
+    </li>
+
+
+    <li *ngIf="user.created_at" >
 
     Joined Github {{user.created_at| timePipe}} days ago
-    </div>
+    </li>
+</ul>
 
 
-</div>
-
-    <div>
+    <div  >
         <h1 class="text-center" >
 
             Public Repositories of {{user.login}}</h1>
     </div>
+
+</div>
 
 </div>
 

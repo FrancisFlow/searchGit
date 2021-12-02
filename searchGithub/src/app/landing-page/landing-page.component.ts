@@ -13,6 +13,10 @@ export class LandingPageComponent implements OnInit {
   user: User;
   repos: Repository[];
 
+  userNotFound(){
+    return "User not found"
+  }
+
   constructor(private gitService:GitServiceService) { 
 
 
