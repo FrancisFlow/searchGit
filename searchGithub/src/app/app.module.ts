@@ -10,6 +10,7 @@ import { TimePipePipe } from './time-pipe.pipe';
 import { RepositoryHighlightDirective } from './repository-highlight.directive';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     TimePipePipe,
     RepositoryHighlightDirective,
     NavBarComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
