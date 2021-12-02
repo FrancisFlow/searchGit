@@ -28,13 +28,6 @@ export class NavBarComponent implements OnInit {
   }
 
 
-  // showRepos:boolean;
-
-  // toggleRepos(){
-  //   this.showRepos = !this.showRepos;
-  // }
-
-
 
   ngOnInit() {
 

@@ -3,6 +3,7 @@ import { User } from './user';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Repository } from './repository';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -24,7 +25,7 @@ export class GitServiceService {
       created_at: Date,
     }
     let promise = new Promise<void>((resolve, reject)=>{
-      this.http.get<userApiResponse>(`https://api.github.com/users/${userName}`).toPromise().then(response=>{
+      this.http.get<userApiResponse>(`https://api.github.com/users/${userName}?${environment.apiKey}`).toPromise().then(response=>{
         this.user.followers = response.followers;
         this.user.following = response.following;
         this.user.avatar_url= response.avatar_url;
@@ -63,7 +64,7 @@ getRepositoryData(userName:string){
         this.repos.pop()
       }
 
-      this.http.get<repositoryApiResponse>(`https://api.github.com/users/${userName}/repos`).toPromise().then(response=>{
+      this.http.get<repositoryApiResponse>(`https://api.github.com/users/${userName}/repos?${environment.apiKeyTwo}`).toPromise().then(response=>{
         for (let i=0; i<this.user.public_repos; i++){
              let repo = new Repository("", "", "", "")
 
