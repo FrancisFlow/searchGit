@@ -3,11 +3,24 @@
 <H1>This is the beginning of the searchGit app</H1>
 
 <div class='container-fluid' >
+
+    <img src={{user.avatar_url}} alt="github-profile">
+
     {{user.followers}}
     {{user.login}}
     {{user.following}}
-    <img src={{user.avatar_url}} alt="github-profile">
+
+    Joined Github {{user.created_at| timePipe}} days ago
+
 
 </div>
-
 </div>
+
+{{user.public_repos}}
+
+
+<div *ngFor=" let repo of repos">
+
+    <app-repositories [repo]=repo></app-repositories>
+</div>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GitServiceService } from '../git-service.service';
 import { User } from '../user'
+import { Repository } from '../repository';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,16 +11,32 @@ import { User } from '../user'
 export class LandingPageComponent implements OnInit {
 
   user: User;
+  repos: Repository[];
 
   constructor(private gitService:GitServiceService) { 
 
 
   }
 
+
+  // toggle repo function
+
+
+  // showRepos:boolean = false;
+
+  // toggleRepos(){
+  //   this.showRepos = !this.showRepos;
+  // }
+
   ngOnInit(){
     this.gitService.getUserData("FrancisFlow");
     this.user= this.gitService.user;
+
+    this.gitService.getRepositoryData("FrancisFlow")
+    this.repos= this.gitService.repos;
+
   }
+
 
 
 }

@@ -12,9 +12,9 @@ export class NavBarComponent implements OnInit {
 
   constructor(private gitService:GitServiceService) { }
 
-  user: User;
-  userName: string;
-  repos:Repository[];
+   user: User;
+   userName: string;
+   repos:Repository[];
 
   // function to fetch user data
 
@@ -23,13 +23,21 @@ export class NavBarComponent implements OnInit {
     this.user = this.gitService.user
     this.gitService.getUserData(this.userName);
     this.repos= this.gitService.repos
-    this.gitService.getUserData(this.userName)
+    this.gitService.getRepositoryData(this.userName)
 
   }
 
 
+  // showRepos:boolean;
+
+  // toggleRepos(){
+  //   this.showRepos = !this.showRepos;
+  // }
+
+
 
   ngOnInit() {
+
   }
 
 }

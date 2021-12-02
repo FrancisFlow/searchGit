@@ -2,17 +2,17 @@
     <div class="card" >
         <div class="card-body">
             <div class="card-title">
-                <a href="{{repo.html_url}}">{{repo.name}}</a>
+                <a href="{{repo.html_url}}"> View on GitHub: {{repo.name}}</a>
             </div>    
 
             <div class="card-text">
-                <p>{{repo.description}}</p>
+                <p>Repo Description: {{repo.description}}</p>
                 <p *ngIf="!repo.description">A description of this repository was not found</p>
             </div>
 
                 <div class="card-bottom">
                     <div *ngIf="repo.language">
-                        {{repo.language}}
+                      Language:  {{repo.language}}
                     </div>
                     <div *ngIf="!repo.language">
                         No language description provided
